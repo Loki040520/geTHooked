@@ -1,4 +1,4 @@
-/* Grundstil */
+/* Grundstil (unverändert) */
 * { margin: 0; padding: 0; box-sizing: border-box !important; }
 html, body { 
   height: 100% !important; 
@@ -6,7 +6,7 @@ html, body {
   overflow-x: hidden !important;
 }
 
-/* Canvas für die Inhalte */
+/* Canvas für die Inhalte (unverändert) */
 .canvas {
     position: relative;
     width: 100%;
@@ -14,46 +14,46 @@ html, body {
     background: #fafafa;
 }
 
-/* Rechtecke */
+/* Rechtecke (unverändert) */
 .rect {
     position: absolute;
     border-radius: 0;
 }
 
-/* Weißes Rechteck */
+/* Weißes Rechteck (unverändert) */
 .rect1 {
     background-color: #FFFFFF;
     width: 80%;
     height: 25%;
-    top: 0%;      /* vertikale Position anpassen */
-    left: 10%;      /* horizontale Position anpassen */
+    top: 0%;
+    left: 10%;
 }
 
-/* Hellgrünes Rechteck */
+/* Hellgrünes Rechteck (unverändert) */
 .rect2 {
     background-color: #A5D6A7;
     width: 80%;
     height: 75%;
-    top: 25%;     /* vertikale Position anpassen */
-    left: 10%;      /* horizontale Position anpassen */
+    top: 25%;
+    left: 10%;
 }
 
-/* Bild */
+/* Bild (unverändert) */
 .bild {
     position: absolute;
-    width: 300px;   /* Bildgröße anpassen */
-    top: 5%;     /* vertikale Position anpassen */
-    left: 40%;      /* horizontale Position anpassen */
-    z-index: 2;     /* über Rechtecken */
+    width: 300px;
+    top: 5%;
+    left: 40%;
+    z-index: 2;
 }
 
-/* Text */
+/* Text (unverändert) */
 .text {
     position: absolute;
     width: 60%;
-    top: 30%;     /* vertikale Position anpassen */
-    left: 20%;      /* horizontale Position anpassen */
-    z-index: 3;     /* über Rechtecken */
+    top: 30%;
+    left: 20%;
+    z-index: 3;
     color: #333;
 }
 
@@ -67,3 +67,53 @@ html, body {
     font-size: 16px;
 }
 
+/* === MOBILE OPTIMIERUNG (NEU!) === */
+@media (max-width: 768px) {
+    .bild {
+        width: 80vw !important;  /* Skaliert mit Bildschirm */
+        max-width: 250px !important;
+        left: 10% !important;
+        top: 2% !important;
+    }
+    
+    .text {
+        width: 80% !important;
+        left: 10% !important;
+        top: 45% !important;
+        text-align: center !important;
+    }
+    
+    .text h1 {
+        font-size: 20px !important;
+    }
+    
+    .text p {
+        font-size: 14px !important;
+    }
+    
+    .rect1, .rect2 {
+        width: 90% !important;
+        left: 5% !important;
+    }
+    
+    .rect2 {
+        top: 28% !important;
+        height: 70% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .bild {
+        top: 1% !important;
+        width: 90vw !important;
+    }
+    
+    .text {
+        top: 50% !important;
+        width: 90% !important;
+    }
+    
+    .text h1 {
+        font-size: 18px !important;
+    }
+}
