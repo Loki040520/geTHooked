@@ -1,0 +1,177 @@
+/* GLOBAL ----------------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8f5e9; /* Hellgrün */
+    color: #333;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+}
+
+/* HEADER ----------------------------------------------------------- */
+header {
+    background: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.logo-img {
+    width: 250px;
+    height: auto;
+}
+
+/* NAVIGATION ------------------------------------------------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 12px 0;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+}
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 17px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.25s, border-bottom 0.25s;
+    border-bottom: 2px solid transparent;
+}
+
+nav button:hover {
+    color: #2e7d32;
+}
+
+nav button.active-tab {
+    color: #2e7d32;
+    font-weight: 600;
+    border-bottom: 2px solid #2e7d32;
+}
+
+/* CONTENT ---------------------------------------------------------- */
+.content {
+    display: none;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.active {
+    display: block;
+}
+
+/* Motivation section centered */
+#produkt h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.motivation-text {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+/* FLEX-ROW ---------------------------------------------------------- */
+.flex-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    position: relative; /* für absolute Positionierung des Hintergrundkastens */
+    margin-top: 160px;    /* alles weiter nach unten */
+}
+
+/* Placeholder images ------------------------------------------------ */
+.placeholder {
+    width: 450px;
+    height: 300px;
+    background-color: #c8e6c9;
+    border: 2px dashed #2e7d32;
+    border-radius: 10px;
+    color: #2e7d32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;  /* Bild liegt über Hintergrundkasten */
+}
+
+/* Hintergrundkasten ------------------------------------------------ */
+.text-box {
+    position: absolute;
+    width: 650px;
+    height: 400px;    /* vertikal vergrößert */
+    background: white;
+    border-radius: 0; /* klare Kanten */
+    box-shadow: none;
+    top: -80px;       /* weiter nach oben gerückt */
+    left: 225px;      /* linke Kante auf Mitte des Bilds */
+    z-index: 0;       /* Hintergrundkasten hinter Bild und Text */
+}
+
+/* Text daneben ----------------------------------------------------- */
+.text-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* FOOTER ------------------------------------------------------------ */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #e0e0e0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE -------------------------------------------------------- */
+@media (max-width: 900px) {
+    .flex-row {
+        flex-wrap: wrap;
+        margin-top: 80px;
+    }
+    .placeholder {
+        width: 100%;
+        height: 240px;
+    }
+    .text-box {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 15px;
+        padding: 10px;
+    }
+    nav button {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+    .content {
+        padding: 25px 15px;
+    }
+    .placeholder {
+        height: 180px;
+    }
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+    .text-box {
+        position: static;
+        margin-top: 15px;
+        width: 100%;
+        height: auto;
+    }
+}
