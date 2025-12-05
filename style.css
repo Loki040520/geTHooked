@@ -1,9 +1,9 @@
 /* Grundstil */
-body {
-    margin: 0;
-    padding: 0;
-    background: #eee;
-    font-family: 'Montserrat', sans-serif;
+* { margin: 0; padding: 0; box-sizing: border-box !important; }
+html, body { 
+  height: 100% !important; 
+  font-family: -apple-system, Arial, sans-serif !important; 
+  overflow-x: hidden !important;
 }
 
 /* Canvas für die Inhalte */
@@ -66,3 +66,4 @@ body {
     margin: 0;
     font-size: 16px;
 }
+
