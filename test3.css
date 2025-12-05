@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    height: 100vh;
+}
+
+/* Container */
+.canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+}
+
+/* Grundstil aller Rechtecke */
+.rect {
+    position: absolute;
+    border-radius: 0px;
+}
+
+/* Rechteck 1 – Weiß */
+.rect1 {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 20%;
+
+    top: 0%;     /* <<< hier bewegen */
+    left: 0%;    /* <<< hier bewegen */
+}
+
+/* Rechteck 2 – Hellgrün */
+.rect2 {
+    background-color: #A5D6A7;
+    width: 100%;
+    height: 100%;
+
+    top: 20%;     /* <<< hier bewegen */
+    left: 0%;     /* <<< hier bewegen */
+}
+
+/* ----------------------------- */
+/*      NEUE ELEMENTE            */
+/* ----------------------------- */
+
+/* Testbild */
+.test-image {
+    position: absolute;
+    width: 200px;       /* Bildgröße */
+    top: 25%;           /* <<< Bild bewegen */
+    left: 40%;          /* <<< Bild bewegen */
+    z-index: 5;
+}
+
+/* Textblock */
+.test-text {
+    position: absolute;
+    width: 300px;
+    top: 40%;            /* <<< Text bewegen */
+    left: 40%;           /* <<< Text bewegen */
+    font-family: Arial, sans-serif;
+    z-index: 6;
+    color: #333;
+}
