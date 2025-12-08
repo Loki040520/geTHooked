@@ -191,7 +191,7 @@ nav button.active-tab {
     max-width: 700px;
     margin: 40px auto;
     box-sizing: border-box;
-    border-radius: 5px; /* leichte klare Ecken */
+    border-radius: 5px;
 }
 
 .contact-left {
@@ -217,8 +217,8 @@ nav button.active-tab {
 .logos-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center; /* zentriert die Logos */
-    gap: 15px; /* Abstand zwischen den Logos */
+    align-items: center;
+    gap: 15px;
 }
 
 .logo-small {
@@ -233,4 +233,66 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 1024px) {
+    .flex-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-container, .text-content {
+        max-width: 90%;
+    }
+
+    .timeline-item {
+        width: 90%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logos-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slides .slide {
+        height: 250px;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+
+    .timeline-img {
+        width: 150px;
+    }
+
+    .future-text {
+        margin: 30px 10px 0 10px;
+    }
+
+    nav button {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+
+    .logo-small {
+        height: 45px;
+    }
+}
+
 
