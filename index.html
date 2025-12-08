@@ -6,7 +6,7 @@
     <title>Nachhaltiges Projekt – Kleiderhaken aus recyceltem Kunststoff</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 
     <script>
         function showTab(tabName) {
@@ -61,16 +61,13 @@
 
 <!-- PRODUKT ---------------------------------------------------------- -->
 <div id="produkt" class="content active">
-    <!-- Zentrierter Motivationstext -->
     <h2>Motivation</h2>
     <p class="motivation-text">
         Im Rahmen unseres Studiums haben wir uns intensiv mit Nachhaltigkeit und Ressourcenschonung auseinandergesetzt. 
         Unser Ziel war es, aus recyceltem Kunststoff ein funktionales Produkt zu entwickeln, das direkt an unserer Hochschule eingesetzt werden kann.
     </p>
 
-    <!-- Flex-Container: Karussell links, Text rechts -->
     <div class="flex-row">
-        <!-- KARUSSELL LINKS -->
         <div class="carousel-container">
             <div class="carousel">
                 <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
@@ -83,7 +80,6 @@
                 </div>
                 <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
-
             <div class="thumbnails">
                 <img src="images/Haken_1.jpeg" class="thumbnail active-thumb" onclick="goToSlide(0)" alt="Thumbnail 1">
                 <img src="images/Haken_2.jpeg" class="thumbnail" onclick="goToSlide(1)" alt="Thumbnail 2">
@@ -93,7 +89,6 @@
             </div>
         </div>
 
-        <!-- TEXT RECHTS ---------------------------------------------------->
         <div class="text-content">
             <p>
                 Der Kleiderhaken ist das Ergebnis eines studentischen Projekts, das zeigen soll, wie nachhaltige Kreisläufe direkt an der TH Mannheim funktionieren können.
@@ -107,7 +102,6 @@
         </div>
     </div>
 
-    <!-- Zentrierter Ausblicktext unter Flex-Container -->
     <p class="future-text">
         Zukünftig möchten wir an der TH Mannheim einen vollständigen Recyclingkreislauf aufbauen. 
         Ziel ist es, sämtliche Kunststoffabfälle der Hochschule effizient zu sammeln, aufzubereiten und für neue Produkte wie unsere Kleiderhaken wiederzuverwenden. 
@@ -117,40 +111,60 @@
 
 <!-- HERSTELLUNG ------------------------------------------------------ -->
 <div id="herstellung" class="content">
-    <h2>Herstellung</h2>
-    <div class="flex-row">
-        <img src="images/Herstellung.png" alt="Herstellungsbild" class="placeholder">
-        <div class="text-box"></div>
-        <div class="text-content">
-            <p>
-                Für die Herstellung unseres Kleiderhakens haben wir mit dem Makerspace der TH Mannheim zusammengearbeitet. 
-                Dort wurde das Material geschreddert, aufgeschmolzen und verarbeitet.
-            </p>
-            <ul>
-                <li>Sortenreines Kunststoffsammeln</li>
-                <li>Zerkleinern im Shredder</li>
-                <li>Aufschmelzen und Neuformung</li>
-                <li>3D-Druck oder Guss</li>
-                <li>Nachbearbeitung</li>
-            </ul>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Zerkleinern im Shredder</h3>
+            <div class="timeline-img-wrapper">
+                <img src="images/Schredder.jpg" alt="Schredder" class="timeline-img">
+            </div>
+            <p>Das Kunststoffmaterial wird im Shredder zerkleinert, um es für den nächsten Verarbeitungsschritt vorzubereiten.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Einfüllung Injektionsmaschine</h3>
+            <div class="timeline-img-wrapper">
+                <img src="images/Spritzguss.jpg" alt="Spritzguss" class="timeline-img">
+            </div>
+            <p>Das zerkleinerte Material wird in die Injektionsmaschine eingefüllt.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Spritzgießen</h3>
+            <div class="timeline-img-wrapper">
+                <img src="images/Spritzguss_3.jpg" alt="Spritzgießen" class="timeline-img">
+                <img src="images/Thermo.jpg" alt="Thermo" class="timeline-img">
+            </div>
+            <p>Die Form wird mit aufgeschmolzenem Kunststoff gefüllt und nach dem Abkühlen das Produkt entnommen.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Gussform und fertiges Produkt</h3>
+            <div class="timeline-img-wrapper">
+                <img src="images/Gussform.jpg" alt="Gussform" class="timeline-img">
+            </div>
+            <p>Nach der Fertigung wird das Endprodukt geprüft und für die Nutzung bereitgestellt.</p>
         </div>
     </div>
 </div>
 
 <!-- KONTAKT ---------------------------------------------------------- -->
 <div id="kontakt" class="content">
-    <h2>Kontakt</h2>
-    <p class="text-box">
-        <b>Projektteam Verfahrens- und Chemietechnik</b><br>
-        Technische Hochschule Mannheim<br>
-        E-Mail: <a href="mailto:info@projektteam-thm.de">info@projektteam-thm.de</a>
-    </p>
+    <div class="contact-container">
+        <div class="contact-left">
+            <h2>Kontakt</h2>
+            <p>Jannis Rembold</p>
+            <p>1924999@stud.hs-mannheim.de</p>
+            <p>Technische Hochschule Mannheim</p>
+        </div>
+        <div class="contact-right">
+            <div class="logos-wrapper">
+                <img src="images/Logo_klein.png" alt="Projekt Logo" class="logo-small">
+                <img src="images/THM.png" alt="THM Logo" class="logo-small">
+            </div>
+        </div>
+    </div>
 </div>
 
 <footer>
-    © 2025 – Studentisches Nachhaltigkeitsprojekt der TH Mannheim
+    Studentisches Nachhaltigkeitsprojekt der TH Mannheim
 </footer>
 
 </body>
 </html>
-
