@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachhaltiges Projekt – Kleiderhaken aus recyceltem Kunststoff</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            document.querySelectorAll('nav button').forEach(b => b.classList.remove('active-tab'));
+            event.target.classList.add('active-tab');
+        }
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('#produkt .slide');
+            if (index >= slides.length) currentSlide = 0;
+            else if (index < 0) currentSlide = slides.length - 1;
+            else currentSlide = index;
+
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === currentSlide);
+            });
+
+            const thumbs = document.querySelectorAll('#produkt .thumbnail');
+            thumbs.forEach((thumb, i) => {
+                thumb.classList.toggle('active-thumb', i === currentSlide);
+            });
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <img src="images/Logo_grün_final.png" alt="Logo" class="logo-img">
+</header>
+
+<nav>
+    <button class="active-tab" onclick="showTab('produkt')">Produkt</button>
+    <button onclick="showTab('herstellung')">Herstellung</button>
+    <button onclick="showTab('kontakt')">Kontakt</button>
+</nav>
+
+<!-- PRODUKT ---------------------------------------------------------- -->
+<div id="produkt" class="content active">
+    <!-- Zentrierter Motivationstext -->
+    <h2>Motivation</h2>
+    <p class="motivation-text">
+        Im Rahmen unseres Studiums haben wir uns intensiv mit Nachhaltigkeit und Ressourcenschonung auseinandergesetzt. 
+        Unser Ziel war es, aus recyceltem Kunststoff ein funktionales Produkt zu entwickeln, das direkt an unserer Hochschule eingesetzt werden kann.
+    </p>
+
+    <!-- Flex-Container: Karussell links, Text rechts -->
+    <div class="flex-row">
+        <!-- KARUSSELL LINKS -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="slides">
+                    <img src="images/Haken_1.jpeg" class="slide active" alt="Produktbild 1">
+                    <img src="images/Haken_2.jpeg" class="slide" alt="Produktbild 2">
+                    <img src="images/Haken_3.jpeg" class="slide" alt="Produktbild 3">
+                    <img src="images/Haken_4.jpeg" class="slide" alt="Produktbild 4">
+                    <img src="images/Haken_5.jpeg" class="slide" alt="Produktbild 5">
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="thumbnails">
+                <img src="images/Haken_1.jpeg" class="thumbnail active-thumb" onclick="goToSlide(0)" alt="Thumbnail 1">
+                <img src="images/Haken_2.jpeg" class="thumbnail" onclick="goToSlide(1)" alt="Thumbnail 2">
+                <img src="images/Haken_3.jpeg" class="thumbnail" onclick="goToSlide(2)" alt="Thumbnail 3">
+                <img src="images/Haken_4.jpeg" class="thumbnail" onclick="goToSlide(3)" alt="Thumbnail 4">
+                <img src="images/Haken_5.jpeg" class="thumbnail" onclick="goToSlide(4)" alt="Thumbnail 5">
+            </div>
+        </div>
+
+        <!-- TEXT RECHTS ---------------------------------------------------->
+        <div class="text-content">
+            <p>
+                Der Kleiderhaken ist das Ergebnis eines studentischen Projekts, das zeigen soll, wie nachhaltige Kreisläufe direkt an der TH Mannheim funktionieren können.
+            </p>
+            <p>
+                Durch Kooperation mit dem Makerspace der Hochschule konnten wir echte Kunststoffe recyceln, aufbereiten und zu einem neuen Produkt formen.
+            </p>
+            <p>
+                Unser Projekt soll langfristig dazu anregen, einen vollständigen Recyclingkreislauf auf dem Campus zu etablieren.
+            </p>
+        </div>
+    </div>
+
+    <!-- Zentrierter Ausblicktext unter Flex-Container -->
+    <p class="future-text">
+        Zukünftig möchten wir an der TH Mannheim einen vollständigen Recyclingkreislauf aufbauen. 
+        Ziel ist es, sämtliche Kunststoffabfälle der Hochschule effizient zu sammeln, aufzubereiten und für neue Produkte wie unsere Kleiderhaken wiederzuverwenden. 
+        So könnte Nachhaltigkeit direkt erlebbar werden und Studierende aktiv in den Kreislauf eingebunden werden.
+    </p>
+</div>
+
+<!-- HERSTELLUNG ------------------------------------------------------ -->
+<div id="herstellung" class="content">
+    <h2>Herstellung</h2>
+    <div class="flex-row">
+        <img src="images/Herstellung.png" alt="Herstellungsbild" class="placeholder">
+        <div class="text-box"></div>
+        <div class="text-content">
+            <p>
+                Für die Herstellung unseres Kleiderhakens haben wir mit dem Makerspace der TH Mannheim zusammengearbeitet. 
+                Dort wurde das Material geschreddert, aufgeschmolzen und verarbeitet.
+            </p>
+            <ul>
+                <li>Sortenreines Kunststoffsammeln</li>
+                <li>Zerkleinern im Shredder</li>
+                <li>Aufschmelzen und Neuformung</li>
+                <li>3D-Druck oder Guss</li>
+                <li>Nachbearbeitung</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- KONTAKT ---------------------------------------------------------- -->
+<div id="kontakt" class="content">
+    <h2>Kontakt</h2>
+    <p class="text-box">
+        <b>Projektteam Verfahrens- und Chemietechnik</b><br>
+        Technische Hochschule Mannheim<br>
+        E-Mail: <a href="mailto:info@projektteam-thm.de">info@projektteam-thm.de</a>
+    </p>
+</div>
+
+<footer>
+    © 2025 – Studentisches Nachhaltigkeitsprojekt der TH Mannheim
+</footer>
+
+</body>
+</html>
