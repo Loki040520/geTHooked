@@ -6,7 +6,7 @@
     <title>Nachhaltiges Projekt – Kleiderhaken aus recyceltem Kunststoff</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 
     <script>
         function showTab(tabName) {
@@ -19,7 +19,7 @@
         let currentSlide = 0;
 
         function showSlide(index) {
-            const slides = document.querySelectorAll('#produkt .slide');
+            const slides = document.querySelectorAll('#home .slide');
             if (index >= slides.length) currentSlide = 0;
             else if (index < 0) currentSlide = slides.length - 1;
             else currentSlide = index;
@@ -28,7 +28,7 @@
                 slide.classList.toggle('active', i === currentSlide);
             });
 
-            const thumbs = document.querySelectorAll('#produkt .thumbnail');
+            const thumbs = document.querySelectorAll('#home .thumbnail');
             thumbs.forEach((thumb, i) => {
                 thumb.classList.toggle('active-thumb', i === currentSlide);
             });
@@ -50,21 +50,27 @@
 <body>
 
 <header>
-    <img src="images/Logo_grün_final.png" alt="Logo" class="logo-img">
+    <a href="#" onclick="showTab('home')">
+        <img src="images/Logo_grün_final.png" alt="Logo" class="logo-img">
+    </a>
 </header>
 
 <nav>
-    <button class="active-tab" onclick="showTab('produkt')">Produkt</button>
-    <button onclick="showTab('herstellung')">Herstellung</button>
+    <button class="active-tab" onclick="showTab('home')">Home</button>
+    <button onclick="showTab('produktion')">Produktion</button>
     <button onclick="showTab('kontakt')">Kontakt</button>
 </nav>
 
-<!-- PRODUKT ---------------------------------------------------------- -->
-<div id="produkt" class="content active">
-    <h2>Motivation</h2>
+<!-- HOME ---------------------------------------------------------- -->
+<div id="home" class="content active">
+    <h2>Ursprung</h2>
+
     <p class="motivation-text">
-        Im Rahmen unseres Studiums haben wir uns intensiv mit Nachhaltigkeit und Ressourcenschonung auseinandergesetzt. 
-        Unser Ziel war es, aus recyceltem Kunststoff ein funktionales Produkt zu entwickeln, das direkt an unserer Hochschule eingesetzt werden kann.
+        Das Projekt <em>geTHooked</em> entstand im Rahmen der Vorlesung
+        <em>Projektmethoden</em> innerhalb des Masterstudiengangs
+        <em>Verfahrens- und Chemietechnik</em> an der TH Mannheim.
+        Dort entwickeln wir als Vorlesungsgruppe ein eigenes Projektthema
+        und übernahmen die komplette Planung sowie die praktische Umsetzung des Projekts.
     </p>
 
     <div class="flex-row">
@@ -80,91 +86,151 @@
                 </div>
                 <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
+
             <div class="thumbnails">
-                <img src="images/Haken_1.jpeg" class="thumbnail active-thumb" onclick="goToSlide(0)" alt="Thumbnail 1">
-                <img src="images/Haken_2.jpeg" class="thumbnail" onclick="goToSlide(1)" alt="Thumbnail 2">
-                <img src="images/Haken_3.jpeg" class="thumbnail" onclick="goToSlide(2)" alt="Thumbnail 3">
-                <img src="images/Haken_4.jpeg" class="thumbnail" onclick="goToSlide(3)" alt="Thumbnail 4">
-                <img src="images/Haken_5.jpeg" class="thumbnail" onclick="goToSlide(4)" alt="Thumbnail 5">
+                <img src="images/Haken_1.jpeg" class="thumbnail active-thumb" onclick="goToSlide(0)">
+                <img src="images/Haken_2.jpeg" class="thumbnail" onclick="goToSlide(1)">
+                <img src="images/Haken_3.jpeg" class="thumbnail" onclick="goToSlide(2)">
+                <img src="images/Haken_4.jpeg" class="thumbnail" onclick="goToSlide(3)">
+                <img src="images/Haken_5.jpeg" class="thumbnail" onclick="goToSlide(4)">
             </div>
         </div>
 
         <div class="text-content">
             <p>
-                Der Kleiderhaken ist das Ergebnis eines studentischen Projekts, das zeigen soll, wie nachhaltige Kreisläufe direkt an der TH Mannheim funktionieren können.
+                Mit unserem selbst hergestellten Kleiderhaken aus recyceltem Kunststoff
+                verbessern wir die Ausstattung der Hochschultoiletten sichtbar.
+                Gleichzeitig zeigen wir, wie Studierende eine Idee aus dem Hörsaal heraus
+                eigenständig zu einem funktionsfähigen Produkt entwickeln können.
             </p>
             <p>
-                Durch Kooperation mit dem Makerspace der Hochschule konnten wir echte Kunststoffe recyceln, aufbereiten und zu einem neuen Produkt formen.
-            </p>
-            <p>
-                Unser Projekt soll langfristig dazu anregen, einen vollständigen Recyclingkreislauf auf dem Campus zu etablieren.
+                Der <em>maker.space</em> spielt dabei eine wichtige Rolle.
+                Dort produzieren wir unsere Haken mithilfe des Spritzgießverfahrens
+                und setzen so unser Konzept technisch um.
             </p>
         </div>
     </div>
 
     <p class="future-text">
-        Zukünftig möchten wir an der TH Mannheim einen vollständigen Recyclingkreislauf aufbauen. 
-        Ziel ist es, sämtliche Kunststoffabfälle der Hochschule effizient zu sammeln, aufzubereiten und für neue Produkte wie unsere Kleiderhaken wiederzuverwenden. 
-        So könnte Nachhaltigkeit direkt erlebbar werden und Studierende aktiv in den Kreislauf eingebunden werden.
+        Dabei bietet <em>geTHooked</em> einen deutlichen Mehrwert für die TH Mannheim.
+        Die Hochschule erhält ein greifbares und nachhaltiges Studierendenprojekt.
+        Die Öffentlichkeitsarbeit gewinnt authentische Beispiele für eine engagierte
+        und moderne Campusgemeinschaft. Der <em>maker.space</em> kann anschaulich
+        demonstrieren, welche studentischen Ideen dort umgesetzt werden und welches
+        Potenzial in seiner Infrastruktur steckt.
+    </p>
+
+    <video class="home-video" controls>
+        <source src="images/Produktionsvideo.mp4" type="video/mp4">
+    </video>
+
+    <p class="future-text">
+        Der Kleiderhaken soll jedoch nur die Startlinie sein.
+        Wir möchten <em>geTHooked</em> als Ausgangspunkt für einen langfristigen
+        Kunststoffkreislauf an der Hochschule nutzen.
+        Dieser soll das Sammeln, Aufbereiten und Wiederverwenden von Kunststoffabfällen ermöglichen.
+        <br><br>
+        Damit diese Idee wachsen kann, braucht es weitere Beteiligte,
+        neue Projekte und zusätzliche Impulse.
+        Also meldet euch gerne bei uns!
     </p>
 </div>
 
-<!-- HERSTELLUNG ------------------------------------------------------ -->
-<div id="herstellung" class="content">
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>Zerkleinern im Shredder</h3>
-            <div class="timeline-img-wrapper">
-                <img src="images/Schredder.jpg" alt="Schredder" class="timeline-img">
+<!-- PRODUKTION ---------------------------------------------------------- -->
+<div id="produktion" class="content">
+
+    <h2 style="text-align:center;">maker.space</h2>
+
+    <div class="produktion-flexrow">
+
+        <!-- Text links -->
+        <div class="produktion-text">
+            <p>
+                Der <em>maker.space</em> ist der offene Werkraum der <em>inno.space – Design Factory Mannheim</em>.
+                Er bietet Studierenden und Forschenden die Möglichkeit, eigene Ideen in die Realität umzusetzen,
+                Prototypen zu entwickeln und moderne Fertigungstechnologien praktisch zu erleben.
+            </p>
+
+            <p>
+                In dieser kreativen Umgebung treffen verschiedene Fachrichtungen aufeinander,
+                wodurch innovative Ideen, interdisziplinärer Austausch und gemeinsames Lernen gefördert werden.
+                Durch die Unterstützung und die bereitgestellten Maschinen des <em>maker.space</em> konnten wir
+                unsere Konzeptidee in ein greifbares Produkt verwandeln: Aus recyceltem Kunststoff, der zunächst
+                geschreddert und anschließend in einer Injektionsmaschine aufgeschmolzen wird, entstand mithilfe
+                unserer selbst entworfenen Spritzgussform ein funktionsfähiges Produkt.
+            </p>
+
+            <p>
+                Für weitere Informationen zum <em>maker.space</em> einfach auf das Logo klicken.
+            </p>
+
+            <div style="margin-top:15px; text-align:left;">
+                <a href="https://inno-space.de/makerspace.html" target="_blank">
+                    <img src="images/inno.png" alt="inno.space maker.space" style="width:150px; height:auto;">
+                </a>
             </div>
-            <p>Das Kunststoffmaterial wird im Shredder zerkleinert, um es für den nächsten Verarbeitungsschritt vorzubereiten.</p>
         </div>
-        <div class="timeline-item">
-            <h3>Einfüllung Injektionsmaschine</h3>
-            <div class="timeline-img-wrapper">
-                <img src="images/Spritzguss.jpg" alt="Spritzguss" class="timeline-img">
-            </div>
-            <p>Das zerkleinerte Material wird in die Injektionsmaschine eingefüllt.</p>
+
+        <!-- Video rechts -->
+        <div class="produktion-video">
+            <video class="home-video" controls>
+                <source src="images/Produktionsvideo.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="timeline-item">
-            <h3>Spritzgießen</h3>
-            <div class="timeline-img-wrapper">
-                <img src="images/Spritzguss_3.jpg" alt="Spritzgießen" class="timeline-img">
-                <img src="images/Thermo.jpg" alt="Thermo" class="timeline-img">
-            </div>
-            <p>Die Form wird mit aufgeschmolzenem Kunststoff gefüllt und nach dem Abkühlen das Produkt entnommen.</p>
-        </div>
-        <div class="timeline-item">
-            <h3>Gussform und fertiges Produkt</h3>
-            <div class="timeline-img-wrapper">
-                <img src="images/Gussform.jpg" alt="Gussform" class="timeline-img">
-            </div>
-            <p>Nach der Fertigung wird das Endprodukt geprüft und für die Nutzung bereitgestellt.</p>
-        </div>
+
     </div>
+
 </div>
+
 
 <!-- KONTAKT ---------------------------------------------------------- -->
 <div id="kontakt" class="content">
-    <div class="contact-container">
-        <div class="contact-left">
-            <h2>Kontakt</h2>
-            <p>Jannis Rembold</p>
-            <p>1924999@stud.hs-mannheim.de</p>
-            <p>Technische Hochschule Mannheim</p>
-        </div>
-        <div class="contact-right">
-            <div class="logos-wrapper">
-                <img src="images/Logo_klein.png" alt="Projekt Logo" class="logo-small">
-                <img src="images/THM.png" alt="THM Logo" class="logo-small">
+    <div class="contact-container" style="flex-direction: column; gap: 20px; align-items: center;">
+
+        <!-- Kontaktdaten und Logos nebeneinander oben -->
+        <div style="display:flex; justify-content:space-between; width:100%; max-width:700px; gap:20px; align-items:flex-start; flex-wrap:wrap; margin-bottom:20px;">
+            
+            <!-- Kontaktdaten links, leicht nach rechts rücken -->
+            <div class="contact-left" style="flex:1; text-align:left; margin-left:20px;">
+                <h2 style="margin-bottom:10px;">Kontakt</h2>
+                <p>Jannis Rembold</p>
+                <p>1924999@stud.hs-mannheim.de</p>
+                <p>Technische Hochschule Mannheim</p>
             </div>
+
+            <!-- Logos rechts -->
+            <div class="contact-right" style="flex:1; text-align:center;">
+                <div style="display:flex; flex-direction:column; align-items:center;">
+                    <h2 style="margin-bottom:10px;">Kooperationspartner</h2>
+                    <div class="logos-wrapper" style="display:flex; flex-direction:column; align-items:center; gap:15px;">
+                        <a href="https://inno-space.de/index.html" target="_blank">
+                            <img src="images/inno.png" alt="inno.space Logo" style="width:180px; height:auto;">
+                        </a>
+                        <a href="https://www.hs-mannheim.de/" target="_blank">
+                            <img src="images/THM.png" alt="THM Logo" class="logo-small">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Gruppenbild und Text unten -->
+        <div style="text-align:center; margin-top:10px;">
+            <h2>Unser Projektteam</h2>
+            <img src="images/Gruppe.jpeg" alt="Projektgruppe" style="width:500px; height:auto; margin-top:10px;">
+            <p style="margin-top:10px;">Vielen Dank für die Zusammenarbeit und das großartige Engagement aller Beteiligten!</p>
+        </div>
+
     </div>
 </div>
 
 <footer>
     Studentisches Nachhaltigkeitsprojekt der TH Mannheim
+    <img src="images/Logo_klein.png" alt="Projekt Logo">
 </footer>
 
 </body>
 </html>
+
+
