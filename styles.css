@@ -61,24 +61,31 @@ nav button.active-tab {
     display: block;
 }
 
-/* ---------------------- PRODUKT ---------------------- */
-#produkt h2 {
+/* ---------------------- HOME ---------------------- */
+#home h2 {
     margin-bottom: 10px;
     text-align: center;
+}
+
+#home p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .motivation-text {
     max-width: 800px;
     margin: 0 auto 30px auto;
-    text-align: center;
 }
 
 .flex-row {
     display: flex;
     gap: 40px;
     align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 10px; /* Standardabstand für Flex-Row */
 }
 
 .carousel-container {
@@ -102,23 +109,17 @@ nav button.active-tab {
     display: block;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
-    color: black;
-    font-weight: bold;
     font-size: 28px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     border: none;
-    transition: 0.3s;
-}
-
-.prev:hover, .next:hover {
-    background: rgba(0,0,0,0.2);
 }
 
 .prev { left: 10px; }
@@ -144,43 +145,55 @@ nav button.active-tab {
 }
 
 .text-content {
-    flex: 1;
+    flex: 0 0 32%;
+    max-width: 32%;
 }
 
 .future-text {
     max-width: 800px;
     margin: 40px auto 0 auto;
-    text-align: center;
-    color: #333;
 }
 
-/* ---------------------- HERSTELLUNG ---------------------- */
-.timeline {
+.home-video {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+
+/* Produktion Register */
+#produktion h2 {
+    margin-bottom: 0px; /* Weniger Abstand zwischen Überschrift und Inhalt */
+}
+
+.produktion-flexrow {
     display: flex;
-    flex-direction: column;
     gap: 30px;
-    align-items: center;
-}
-
-.timeline-item {
-    background: #fff;
-    padding: 15px;
-    width: 500px;
-    text-align: center;
-    border-radius: 0;
-}
-
-.timeline-img-wrapper {
-    display: flex;
+    align-items: flex-start;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    margin-top: 0; /* Kein zusätzlicher Abstand */
 }
 
-.timeline-img {
-    width: 200px;
-    object-fit: cover;
+.produktion-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: justify;
+    hyphens: auto;
 }
+
+.produktion-video {
+    flex-shrink: 0;
+    max-width: 500px;
+}
+
+.produktion-video .home-video {
+    width: 100%;
+    border-radius: 10px;
+}
+
 
 /* ---------------------- KONTAKT ---------------------- */
 .contact-container {
@@ -190,14 +203,12 @@ nav button.active-tab {
     padding: 20px;
     max-width: 700px;
     margin: 40px auto;
-    box-sizing: border-box;
     border-radius: 5px;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
 .contact-left h2 {
@@ -226,12 +237,21 @@ nav button.active-tab {
     object-fit: contain;
 }
 
+/* ---------------------- FOOTER ---------------------- */
 footer {
-    text-align: center;
-    padding: 25px;
     background-color: #e0e0e0;
-    margin-top: 40px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
     font-size: 14px;
+}
+
+footer img {
+    height: 40px;
+    width: auto;
 }
 
 /* ---------------------- RESPONSIVE ---------------------- */
@@ -241,29 +261,19 @@ footer {
         align-items: center;
     }
 
-    .carousel-container, .text-content {
+    .carousel-container,
+    .text-content {
         max-width: 90%;
-    }
-
-    .timeline-item {
-        width: 90%;
+        flex: 0 0 100%;
     }
 
     .contact-container {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .contact-left, .contact-right {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .logos-wrapper {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+    .contact-right {
+        margin-top: 20px;
     }
 }
 
@@ -275,10 +285,6 @@ footer {
     .thumbnail {
         width: 50px;
         height: 50px;
-    }
-
-    .timeline-img {
-        width: 150px;
     }
 
     .future-text {
@@ -293,6 +299,12 @@ footer {
     .logo-small {
         height: 45px;
     }
+
+    .home-video {
+        max-width: 90%;
+    }
 }
+
+
 
 
