@@ -70,8 +70,6 @@ nav button.active-tab {
 #home p {
     text-align: justify;
     hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
 }
 
 .motivation-text {
@@ -85,7 +83,7 @@ nav button.active-tab {
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px; /* Standardabstand für Flex-Row */
+    margin-top: 10px;
 }
 
 .carousel-container {
@@ -162,10 +160,9 @@ nav button.active-tab {
     border-radius: 10px;
 }
 
-
-/* Produktion Register */
+/* ---------------------- PRODUKTION ---------------------- */
 #produktion h2 {
-    margin-bottom: 0px; /* Weniger Abstand zwischen Überschrift und Inhalt */
+    margin-bottom: 0px;
 }
 
 .produktion-flexrow {
@@ -174,7 +171,7 @@ nav button.active-tab {
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 0; /* Kein zusätzlicher Abstand */
+    margin-top: 0;
 }
 
 .produktion-text {
@@ -193,7 +190,6 @@ nav button.active-tab {
     width: 100%;
     border-radius: 10px;
 }
-
 
 /* ---------------------- KONTAKT ---------------------- */
 .contact-container {
@@ -277,9 +273,24 @@ footer img {
     }
 }
 
+/* 🔽 NUR MINIMALE HANDY-FIXES */
 @media (max-width: 600px) {
+
+    /* Bilder & Videos dürfen schrumpfen, Layout bleibt */
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Carousel-Bilder: keine feste Höhe auf Handy */
     .slides .slide {
-        height: 250px;
+        height: auto;
+    }
+
+    /* Videos nutzen mehr Breite */
+    .home-video {
+        max-width: 100%;
     }
 
     .thumbnail {
@@ -299,11 +310,9 @@ footer img {
     .logo-small {
         height: 45px;
     }
-
-    .home-video {
-        max-width: 90%;
-    }
 }
+
+
 
 
 
