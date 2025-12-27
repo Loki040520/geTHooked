@@ -68,8 +68,8 @@ nav button.active-tab {
 }
 
 #home p {
-    text-align: justify;
-    hyphens: auto;
+    text-align: justify; /* Blocksatz */
+    hyphens: auto;       /* Silbentrennung */
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
 }
@@ -156,7 +156,7 @@ nav button.active-tab {
 
 .home-video {
     display: block;
-    max-width: 300px;
+    max-width: 300px; /* Größe wie gewünscht */
     width: 100%;
     margin: 30px auto;
     border-radius: 10px;
@@ -179,18 +179,18 @@ nav button.active-tab {
 .produktion-text {
     flex: 1;
     max-width: 500px;
-    text-align: justify;
+    text-align: justify; /* Blocksatz */
     hyphens: auto;
 }
 
 .produktion-video {
     flex-shrink: 0;
-    max-width: 400px; /* kleiner auf Laptop */
+    max-width: 300px; /* kleineres Video wie Home */
 }
 
 .produktion-video .home-video {
     width: 100%;
-    max-width: 400px; /* kleiner auf Laptop */
+    max-width: 300px; /* kleineres Video */
     margin: 30px auto;
     display: block;
     border-radius: 10px;
@@ -198,7 +198,7 @@ nav button.active-tab {
 
 /* Logo unter Produktion */
 .produktion-text a img {
-    display: block; /* zentriert auf Handy */
+    display: block;
     margin: 15px auto 0 auto;
 }
 
@@ -302,7 +302,7 @@ footer img {
     .future-text,
     .produktion-text,
     .motivation-text {
-        text-align: center; /* Text mittig auf Handy */
+        text-align: justify; /* Blocksatz auf Handy */
         hyphens: auto;
     }
 
@@ -315,10 +315,10 @@ footer img {
         height: 45px;
     }
 
-    /* Home- und Produktionsvideo skalieren */
+    /* Videos skalieren wie Home */
     .home-video,
     .produktion-video .home-video {
-        max-width: 90%;
+        max-width: 300px;
         width: 100%;
         margin: 20px auto;
     }
@@ -330,12 +330,14 @@ footer img {
         height: auto;
     }
 
-    /* inno.space Logo unter Produktion zentrieren */
+    /* inno.space Logo unter Produktion zentriert */
     .produktion-text a img {
         display: block;
         margin: 15px auto 0 auto;
     }
 }
+
+
 
 
 
