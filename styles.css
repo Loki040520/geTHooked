@@ -67,9 +67,12 @@ nav button.active-tab {
     text-align: center;
 }
 
-#home p {
+#home p,
+.produktion-text p {
     text-align: justify;
     hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .motivation-text {
@@ -177,8 +180,6 @@ nav button.active-tab {
 .produktion-text {
     flex: 1;
     max-width: 500px;
-    text-align: justify;
-    hyphens: auto;
 }
 
 .produktion-video {
@@ -273,24 +274,31 @@ footer img {
     }
 }
 
-/* 🔽 NUR MINIMALE HANDY-FIXES */
+/* 🔽 HANDY-FIXES (gezielt & sicher) */
 @media (max-width: 600px) {
 
-    /* Bilder & Videos dürfen schrumpfen, Layout bleibt */
-    img,
-    video {
-        max-width: 100%;
-        height: auto;
+    /* Texte: kein Blocksatz auf Handy */
+    #home p,
+    .produktion-text p {
+        text-align: left;
+        hyphens: auto;
+        word-break: normal;
+        overflow-wrap: break-word;
     }
 
-    /* Carousel-Bilder: keine feste Höhe auf Handy */
+    /* Carousel-Bilder: keine feste Höhe */
     .slides .slide {
         height: auto;
     }
 
-    /* Videos nutzen mehr Breite */
+    /* Home-Video bleibt groß */
     .home-video {
         max-width: 100%;
+    }
+
+    /* Produktionsvideo bewusst kleiner */
+    .produktion-video .home-video {
+        max-width: 90%;
     }
 
     .thumbnail {
@@ -311,6 +319,8 @@ footer img {
         height: 45px;
     }
 }
+
+
 
 
 
