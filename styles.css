@@ -190,7 +190,7 @@ nav button.active-tab {
 
 .produktion-video .home-video {
     width: 100%;
-    max-width: 300px; /* wie Home-Video */
+    max-width: 300px;
     margin: 30px auto;
     display: block;
     border-radius: 10px;
@@ -293,10 +293,10 @@ footer img {
         height: 50px;
     }
 
-    .future-text {
-        margin: 30px 10px 0 10px;
-        text-align: justify; /* besserer Blocksatz */
-        hyphens: auto;       /* saubere Silbentrennung */
+    .future-text,
+    .produktion-text {
+        text-align: left; /* Linksbündig auf Handy für sauberen Text */
+        hyphens: auto;
     }
 
     nav button {
@@ -308,18 +308,22 @@ footer img {
         height: 45px;
     }
 
+    /* Home- und Produktionsvideo gleich skalieren */
     .home-video,
     .produktion-video .home-video {
         max-width: 90%;
+        width: 100%;
+        margin: 20px auto;
     }
 
     /* Team-Bild kleiner auf Handy */
     #kontakt img[alt="Projektgruppe"] {
         width: 90%;
-        max-width: 350px;
+        max-width: 300px;
         height: auto;
     }
 }
+
 
 
 
