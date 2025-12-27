@@ -185,15 +185,21 @@ nav button.active-tab {
 
 .produktion-video {
     flex-shrink: 0;
-    max-width: 500px;
+    max-width: 400px; /* kleiner auf Laptop */
 }
 
 .produktion-video .home-video {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px; /* kleiner auf Laptop */
     margin: 30px auto;
     display: block;
     border-radius: 10px;
+}
+
+/* Logo unter Produktion */
+.produktion-text a img {
+    display: block; /* zentriert auf Handy */
+    margin: 15px auto 0 auto;
 }
 
 /* ---------------------- KONTAKT ---------------------- */
@@ -294,9 +300,10 @@ footer img {
     }
 
     .future-text,
-    .produktion-text {
-        text-align: center; /* Jetzt mittig zentriert */
-        hyphens: auto;      /* Silbentrennung bleibt */
+    .produktion-text,
+    .motivation-text {
+        text-align: center; /* Text mittig auf Handy */
+        hyphens: auto;
     }
 
     nav button {
@@ -308,7 +315,7 @@ footer img {
         height: 45px;
     }
 
-    /* Home- und Produktionsvideo gleich skalieren */
+    /* Home- und Produktionsvideo skalieren */
     .home-video,
     .produktion-video .home-video {
         max-width: 90%;
@@ -322,7 +329,14 @@ footer img {
         max-width: 300px;
         height: auto;
     }
+
+    /* inno.space Logo unter Produktion zentrieren */
+    .produktion-text a img {
+        display: block;
+        margin: 15px auto 0 auto;
+    }
 }
+
 
 
 
