@@ -295,8 +295,8 @@ footer img {
 
     .future-text,
     .produktion-text {
-        text-align: left; /* Linksbündig auf Handy für sauberen Text */
-        hyphens: auto;
+        text-align: center; /* Jetzt mittig zentriert */
+        hyphens: auto;      /* Silbentrennung bleibt */
     }
 
     nav button {
@@ -323,6 +323,7 @@ footer img {
         height: auto;
     }
 }
+
 
 
 
