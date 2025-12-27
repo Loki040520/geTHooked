@@ -338,12 +338,13 @@ footer img {
         margin: 15px auto 0 auto;
     }
 
-    /* Überschrift maker.space zentrieren auf Handy */
-    .produktion-text h2 {
-    width: 70%;       /* Breite für Desktop */
-    text-align: justify;
-    margin-bottom: 0px;
+    #produktion h2 {
+        width: 100%;       /* volle Breite auf Handy */
+        text-align: center; /* zentriert */
+        margin-bottom: 20px; /* optional etwas Abstand zum Text */
+    }
 }
+
 
 
 
