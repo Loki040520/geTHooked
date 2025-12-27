@@ -163,11 +163,10 @@ nav button.active-tab {
 }
 
 /* ---------------------- PRODUKTION ---------------------- */
-/* Überschrift Produktion zentrieren über Textbereich */
 #produktion h2 {
-    width: 70%;       /* ganze Breite nutzen */
-    text-align: center; /* horizontal zentrieren */
-    margin-bottom: 0px; /* Abstand zum Text */
+    width: 70%;       /* Breite für Desktop */
+    text-align: center;
+    margin-bottom: 0px;
 }
 
 .produktion-flexrow {
@@ -338,7 +337,13 @@ footer img {
         display: block;
         margin: 15px auto 0 auto;
     }
+
+    /* Überschrift maker.space zentrieren auf Handy */
+    .produktion-text h2 {
+        text-align: center;
+    }
 }
+
 
 
 
