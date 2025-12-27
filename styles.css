@@ -163,8 +163,11 @@ nav button.active-tab {
 }
 
 /* ---------------------- PRODUKTION ---------------------- */
+/* Überschrift Produktion zentrieren über Textbereich */
 #produktion h2 {
-    margin-bottom: 0px;
+    width: 70%;       /* ganze Breite nutzen */
+    text-align: center; /* horizontal zentrieren */
+    margin-bottom: 0px; /* Abstand zum Text */
 }
 
 .produktion-flexrow {
