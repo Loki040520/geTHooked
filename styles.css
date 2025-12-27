@@ -67,8 +67,7 @@ nav button.active-tab {
     text-align: center;
 }
 
-#home p,
-.produktion-text p {
+#home p {
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -180,6 +179,8 @@ nav button.active-tab {
 .produktion-text {
     flex: 1;
     max-width: 500px;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .produktion-video {
@@ -189,6 +190,9 @@ nav button.active-tab {
 
 .produktion-video .home-video {
     width: 100%;
+    max-width: 300px; /* wie Home-Video */
+    margin: 30px auto;
+    display: block;
     border-radius: 10px;
 }
 
@@ -234,6 +238,11 @@ nav button.active-tab {
     object-fit: contain;
 }
 
+.contact-container img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ---------------------- FOOTER ---------------------- */
 footer {
     background-color: #e0e0e0;
@@ -274,31 +283,9 @@ footer img {
     }
 }
 
-/* 🔽 HANDY-FIXES (gezielt & sicher) */
 @media (max-width: 600px) {
-
-    /* Texte: kein Blocksatz auf Handy */
-    #home p,
-    .produktion-text p {
-        text-align: left;
-        hyphens: auto;
-        word-break: normal;
-        overflow-wrap: break-word;
-    }
-
-    /* Carousel-Bilder: keine feste Höhe */
     .slides .slide {
-        height: auto;
-    }
-
-    /* Home-Video bleibt groß */
-    .home-video {
-        max-width: 100%;
-    }
-
-    /* Produktionsvideo bewusst kleiner */
-    .produktion-video .home-video {
-        max-width: 90%;
+        height: 250px;
     }
 
     .thumbnail {
@@ -308,6 +295,8 @@ footer img {
 
     .future-text {
         margin: 30px 10px 0 10px;
+        text-align: justify; /* besserer Blocksatz */
+        hyphens: auto;       /* saubere Silbentrennung */
     }
 
     nav button {
@@ -318,7 +307,20 @@ footer img {
     .logo-small {
         height: 45px;
     }
+
+    .home-video,
+    .produktion-video .home-video {
+        max-width: 90%;
+    }
+
+    /* Team-Bild kleiner auf Handy */
+    #kontakt img[alt="Projektgruppe"] {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+    }
 }
+
 
 
 
