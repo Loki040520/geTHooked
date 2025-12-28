@@ -1,0 +1,342 @@
+/* ---------------------- GLOBAL ---------------------- */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8f5e9;
+    color: #333;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.logo-img {
+    width: 250px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 12px 0;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+}
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 17px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.25s, border-bottom 0.25s;
+    border-bottom: 2px solid transparent;
+}
+
+nav button:hover {
+    color: #1ba139;
+}
+
+nav button.active-tab {
+    color: #1ba139;
+    font-weight: 600;
+    border-bottom: 2px solid #1ba139;
+}
+
+.content {
+    display: none;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.active {
+    display: block;
+}
+
+/* ---------------------- HOME ---------------------- */
+#home h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#home p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+.motivation-text {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.flex-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.carousel-container {
+    max-width: 500px;
+    flex-shrink: 0;
+}
+
+.carousel {
+    position: relative;
+}
+
+.slides .slide {
+    display: none;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slides .active {
+    display: block;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    border: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.thumbnails {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnail.active-thumb {
+    border-color: #1ba139;
+}
+
+.text-content {
+    flex: 0 0 32%;
+    max-width: 32%;
+}
+
+.future-text {
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+}
+
+.home-video {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+/* ---------------------- PRODUKTION ---------------------- */
+#produktion h2 {
+    margin-left: 300px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.produktion-flexrow {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.produktion-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.produktion-video {
+    flex-shrink: 0;
+    max-width: 300px;
+}
+
+.produktion-video .home-video {
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.produktion-text a img {
+    display: block;
+    margin: 15px auto 0 auto;
+}
+
+/* ---------------------- KONTAKT ---------------------- */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    border-radius: 5px;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-left h2 {
+    margin-bottom: 15px;
+}
+
+.contact-left p {
+    margin: 5px 0;
+}
+
+.contact-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-small {
+    height: 60px;
+    object-fit: contain;
+}
+
+.contact-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+footer {
+    background-color: #e0e0e0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
+    font-size: 14px;
+}
+
+footer img {
+    height: 40px;
+    width: auto;
+}
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 1024px) {
+    .flex-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-container,
+    .text-content {
+        max-width: 90%;
+        flex: 0 0 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-right {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slides .slide {
+        height: 250px;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+
+    .future-text,
+    .produktion-text,
+    .motivation-text {
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    nav button {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+
+    .logo-small {
+        height: 45px;
+    }
+
+    .home-video,
+    .produktion-video .home-video {
+        max-width: 300px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #kontakt img[alt="Projektgruppe"] {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .produktion-text a img {
+        display: block;
+        margin: 15px auto 0 auto;
+    }
+
+@media (max-width: 600px) {
+    #produktion h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+}
