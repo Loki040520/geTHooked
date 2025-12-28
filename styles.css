@@ -156,7 +156,7 @@ nav button.active-tab {
 
 .home-video {
     display: block;
-    max-width: 300px; /* Größe wie gewünscht */
+    max-width: 300px;
     width: 100%;
     margin: 30px auto;
     border-radius: 10px;
@@ -164,8 +164,8 @@ nav button.active-tab {
 
 /* ---------------------- PRODUKTION ---------------------- */
 #produktion h2 {
-    width: 70%;       /* Breite für Desktop */
-    text-align: center;
+    margin-left: 300px; /* Verschiebung nach rechts */
+    text-align: left;   /* Links bleibt linksbündig */
     margin-bottom: 0px;
 }
 
@@ -187,18 +187,17 @@ nav button.active-tab {
 
 .produktion-video {
     flex-shrink: 0;
-    max-width: 300px; /* kleineres Video wie Home */
+    max-width: 300px;
 }
 
 .produktion-video .home-video {
     width: 100%;
-    max-width: 300px; /* kleineres Video */
+    max-width: 300px;
     margin: 30px auto;
     display: block;
     border-radius: 10px;
 }
 
-/* Logo unter Produktion */
 .produktion-text a img {
     display: block;
     margin: 15px auto 0 auto;
@@ -304,7 +303,7 @@ footer img {
     .future-text,
     .produktion-text,
     .motivation-text {
-        text-align: justify; /* Blocksatz auf Handy */
+        text-align: justify;
         hyphens: auto;
     }
 
@@ -317,7 +316,6 @@ footer img {
         height: 45px;
     }
 
-    /* Videos skalieren wie Home */
     .home-video,
     .produktion-video .home-video {
         max-width: 300px;
@@ -325,23 +323,22 @@ footer img {
         margin: 20px auto;
     }
 
-    /* Team-Bild kleiner auf Handy */
     #kontakt img[alt="Projektgruppe"] {
         width: 90%;
         max-width: 300px;
         height: auto;
     }
 
-    /* inno.space Logo unter Produktion zentriert */
     .produktion-text a img {
         display: block;
         margin: 15px auto 0 auto;
     }
 
+    /* Handy: Überschrift zentriert */
+@media (max-width: 600px) {
     #produktion h2 {
-        width: 100%;       /* volle Breite auf Handy */
-        text-align: center; /* zentriert */
-        margin-bottom: 20px; /* optional etwas Abstand zum Text */
+        margin-left: 0;   /* Reset */
+        text-align: center;
     }
 }
 
